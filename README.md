@@ -2,10 +2,9 @@
 -  @author  FindFreeFire <1719048237@qq.com> 
 -  @link 
 -  @version 1.0 
--  相关API网站 ：http://b.test.yunxi.tv/developer/
--  
-使用Android的音视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放。
 
+
+使用Android的音视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.test.yunxi.tv/developer/
 
 
 ### 1.功能特性
