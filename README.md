@@ -44,6 +44,7 @@ YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK�
 ```java
       yunxiPlayer.init(this, livestreamJson, loadingDrawable);     //初始化视频播放器
 ```
+    相关API网站 ：http://b.test.yunxi.tv/developer/  获取livestream
 #### 6.各个生命周期配置 
 ```java
     @Override
