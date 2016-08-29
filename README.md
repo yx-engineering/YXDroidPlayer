@@ -74,4 +74,10 @@ YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK�
 ```java
       yunxiPlayer.stopPlayer();
 ```  
+
+#### 3.判断当前是否在直播中
+   
+```java
+       yunxiPlayer.isPlaying();
+```  
   
