@@ -5,7 +5,7 @@
 
 YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK，可高度定制化和二次开发，特色是支持 RTMP 和 HLS 直播流媒体播放。
 
-### 功能特性
+### 1.功能特性
 - [x] RTMP 直播流播放
 - [x] HLS 播放
 - [x] 高可定制
@@ -13,7 +13,7 @@ YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK�
 - [x] RTMP 直播首屏秒开支持
 - [x] RTMP 直播累积延迟消除技术
 
-### 快速配置
+### 2.快速配置
 
 #### 1.添加权限
 在 AndroidMainfest 添加网络访问权限
@@ -63,7 +63,7 @@ YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK�
     } 
     
 ```
-### 直播开始和结束
+### 3.控制方法
 #### 1.开始直播
    
 ```java
