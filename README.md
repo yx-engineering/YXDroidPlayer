@@ -48,8 +48,8 @@ YXPlayerKit 是一个基于 PLPlayerKit 适用于 iOS 的音视频播放器 SDK�
 ```java
     @Override
     protected void onResume() {
-        yunxiPlayer.resumePlay();
         super.onResume();
+        yunxiPlayer.resumePlay();
     }
 
     @Override
