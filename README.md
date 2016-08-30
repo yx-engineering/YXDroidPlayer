@@ -62,7 +62,7 @@
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        yunxiPlayer.onDestory();
+        yunxiPlayer.destoryPlayer;
     } 
     
 ```
