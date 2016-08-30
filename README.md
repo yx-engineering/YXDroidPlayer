@@ -1,4 +1,4 @@
-## 云犀直播 Player 控件 , 官方API说明
+## 云犀直播 YXDroidPlayer 播放控件说明文档
 -  @author  FindFreeFire <1719048237@qq.com> 
 -  @link 
 -  @version 1.0 
@@ -17,7 +17,9 @@
 
 #### 添加权限
 在 AndroidMainfest 添加网络访问权限
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
+```
 
 #### 配置工程
 将 yunxi_player.aar 文件拷贝到项目目录下的libs文件下
