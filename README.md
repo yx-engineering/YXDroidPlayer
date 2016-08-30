@@ -3,7 +3,7 @@
 -  @link 
 -  @version 1.0 
 
-云犀直播开发的Android的视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.test.yunxi.tv/developer/
+云犀直播开发的Android的视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.yunxi.tv/developer/
 
 ### 1.功能特性:
 - [x] RTMP 直播流播放
@@ -44,7 +44,7 @@
 ```java
       yunxiPlayer.init(this, livestreamJson, loadingDrawable);     //初始化视频播放器
 ```
-    相关API网站 ：http://b.test.yunxi.tv/developer/  获取livestream
+    相关API网站 ：http://b.yunxi.tv/developer/  获取livestream
 #### 各个生命周期配置 
 ```java
     @Override
