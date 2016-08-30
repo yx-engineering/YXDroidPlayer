@@ -3,11 +3,9 @@
 -  @link 
 -  @version 1.0 
 
+云犀直播开发的Android的视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.test.yunxi.tv/developer/
 
-使用Android的音视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.test.yunxi.tv/developer/
-
-
-### 1.功能特性
+### 1.功能特性:
 - [x] RTMP 直播流播放
 - [x] HLS 播放
 - [x] 高可定制
@@ -15,16 +13,16 @@
 - [x] RTMP 直播首屏秒开支持
 - [x] RTMP 直播累积延迟消除技术
 
-### 2.快速配置
+### 2.快速配置:
 
-#### 1.添加权限
+#### 添加权限
 在 AndroidMainfest 添加网络访问权限
 <uses-permission android:name="android.permission.INTERNET" />
 
-#### 2.配置工程
+#### 配置工程
 将 yunxi_player.aar 文件拷贝到项目目录下的libs文件下
 
-#### 3.布局文件
+#### 布局文件
 ```xml
  <com.yunxi.player.lib.YXPlayer
                 android:id="@+id/yunxi_player"
@@ -33,19 +31,19 @@
                 android:layout_gravity="center"
                 android:orientation="vertical"></com.yunxi.player.lib.YXPlayer>
 ```
-#### 4.注册SDK
+#### 注册SDK
  
 ```java
        YXSDK.register(APPID);    //注册信息 填入APPID
 ```
     
-#### 5.初始化播放器
+#### 初始化播放器
    
 ```java
       yunxiPlayer.init(this, livestreamJson, loadingDrawable);     //初始化视频播放器
 ```
     相关API网站 ：http://b.test.yunxi.tv/developer/  获取livestream
-#### 6.各个生命周期配置 
+#### 各个生命周期配置 
 ```java
     @Override
     protected void onResume() {
@@ -66,19 +64,19 @@
     } 
     
 ```
-### 3.控制方法
-#### 1.开始直播
+### 3.控制方法:
+#### 开始直播
    
 ```java
       yunxiPlayer.startPlayer();
 ```  
-#### 2.停止直播
+#### 停止直播
    
 ```java
       yunxiPlayer.stopPlayer();
 ```  
 
-#### 3.判断当前是否在直播中
+#### 判断当前是否在直播中
    
 ```java
        yunxiPlayer.isPlaying();
