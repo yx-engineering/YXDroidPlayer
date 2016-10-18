@@ -43,7 +43,7 @@
 ```java
       yunxiPlayer.init(this, livestreamJson, loadingDrawable);     //初始化视频播放器
 ```
-    相关API网站 ：http://b.yunxi.tv/developer/  获取livestream
+
 #### (2).各个生命周期配置 
 ```java
     @Override
@@ -68,6 +68,7 @@
 #### (3).直播准备,载入播放数据
 ```java
         yunxiPlayer.steup(thirdUser, activityModel, livestreamJson);
+        //相关API网站 ：http://b.yunxi.tv/developer/  获取livestream
 ```
 #### (4).播放器控制:
 ##### 开始直播
