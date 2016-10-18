@@ -67,8 +67,11 @@
 ```
 #### (3).直播准备,载入播放数据
 ```java
+        YXThirdUser thirdUser = new YXThirdUser("0001-sdk", "卖报的小行家",
+                        "http://www.th7.cn/d/file/p/2016/09/12/891c32cf36166bc42604ba226a7d5dba.jpg");
+        //创建第三方用户对象,参数分别为 1.用户id+"sdk"  2.用户名  3. 用户头像url地址
         yunxiPlayer.steup(thirdUser, activityModel, livestreamJson);
-        //相关API网站 ：http://b.yunxi.tv/developer/  获取livestream
+        //相关API网站 ：http://b.yunxi.tv/developer/  获取livestreamJson
 ```
 #### (4).播放器控制:
 ##### 开始直播
@@ -86,4 +89,53 @@
 ```java
        yunxiPlayer.isPlaying();
 ```  
-  
+###  3.关于数据获取
+#### (1).可以利用包内的YXApi获取活动的播放信息
+```java
+      YXApi.get().getLivestream(activityModel.id, System.currentTimeMillis(), new YXApiResponseHandler() {
+            @Override
+            public void onSuccess(YXApiResponse resp) throws JSONException {
+                String livestreamJson = resp.getString(YXApi.VALUE_DATA);
+                YXThirdUser thirdUser = new YXThirdUser("0001-sdk", "卖报的小行家",
+                        "http://www.th7.cn/d/file/p/2016/09/12/891c32cf36166bc42604ba226a7d5dba.jpg");
+                yunxiPlayer.steup(thirdUser, activityModel, livestreamJson);
+                yunxiPlayer.startPlayer();
+            }
+
+            @Override
+            public void onError(YXApiResponse resp) {
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                yxErrorToast.showError(errorResponse.optString("msg"));
+            }
+
+            @Override
+            public void onComplete() {
+                loadingDialog.cancel();
+            }
+        });
+```  
+#### (1).可以利用包内的YXApi获取活动列表信息
+```java
+     YXApi.get().getActivitys(p, 20, System.currentTimeMillis() / 1000, new YXApiResponseHandler() {
+            @Override
+            public void onSuccess(YXApiResponse resp) throws JSONException{
+                 JSONObject data = new JSONObject(resp.getString(YXApi.VALUE_DATA));
+                 final JSONArray jsonArray = data.getJSONArray(ACTIVITIES);
+            }
+
+            @Override
+            public void onError(YXApiResponse resp) {
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+```  
