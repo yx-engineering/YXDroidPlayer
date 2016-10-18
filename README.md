@@ -117,7 +117,7 @@
             }
         });
 ```  
-#### (1).可以利用包内的YXApi获取活动列表信息
+#### (2).可以利用包内的YXApi获取活动列表信息
 ```java
      YXApi.get().getActivitys(p, 20, System.currentTimeMillis() / 1000, new YXApiResponseHandler() {
             @Override
