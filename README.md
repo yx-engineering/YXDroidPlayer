@@ -35,7 +35,7 @@
     </com.yunxi.player.lib.YXActivityList>
 ```
 #### (2).加载数据
-    YXActivityList控件会根据注册信息自动加载数据
+      YXActivityList控件会根据注册信息自动加载数据
 ###  2.播放器控件
 #### (1).初始化播放器
    
