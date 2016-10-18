@@ -18,7 +18,7 @@
 #### (1).添加权限
 在 AndroidMainfest 添加网络访问权限
 ```xml
-<uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.INTERNET" />
 ```
 #### (2).注册应用
 ```java
@@ -35,7 +35,8 @@
         android:layout_height="match_parent">
     </com.yunxi.player.lib.YXActivityList>
 ```
-   
+#### (2).加载数据
+    YXActivityList控件会根据注册信息自动加载数据
 ###  2.播放器控件
 #### (1).初始化播放器
    
