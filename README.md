@@ -90,7 +90,31 @@
        yunxiPlayer.isPlaying();
 ```  
 ###  3.关于数据获取
-#### (1).可以利用包内的YXApi获取活动的播放信息
+
+#### (1).可以利用包内的YXApi获取活动列表信息
+```java
+     YXApi.get().getActivitys(p, 20, System.currentTimeMillis() / 1000, new YXApiResponseHandler() {
+            @Override
+            public void onSuccess(YXApiResponse resp) throws JSONException{
+                 JSONObject data = new JSONObject(resp.getString(YXApi.VALUE_DATA));
+                 final JSONArray jsonArray = data.getJSONArray(ACTIVITIES);
+            }
+
+            @Override
+            public void onError(YXApiResponse resp) {
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+```  
+
+#### (2).可以利用包内的YXApi获取活动的播放信息
 ```java
       YXApi.get().getLivestream(activityModel.id, System.currentTimeMillis(), new YXApiResponseHandler() {
             @Override
@@ -114,28 +138,6 @@
             @Override
             public void onComplete() {
                 loadingDialog.cancel();
-            }
-        });
-```  
-#### (2).可以利用包内的YXApi获取活动列表信息
-```java
-     YXApi.get().getActivitys(p, 20, System.currentTimeMillis() / 1000, new YXApiResponseHandler() {
-            @Override
-            public void onSuccess(YXApiResponse resp) throws JSONException{
-                 JSONObject data = new JSONObject(resp.getString(YXApi.VALUE_DATA));
-                 final JSONArray jsonArray = data.getJSONArray(ACTIVITIES);
-            }
-
-            @Override
-            public void onError(YXApiResponse resp) {
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-            }
-
-            @Override
-            public void onComplete() {
             }
         });
 ```  
