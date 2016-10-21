@@ -1,5 +1,5 @@
 ## 云犀直播 YXDroidPlayer 播放控件说明文档
--  @author  FindFreeFire <1719048237@qq.com> 
+-  @author  FindFreeFire <zhouhang@yunxi.tv> 
 -  @link 
 -  @version 1.0 
 
@@ -14,12 +14,31 @@
 
 ### 1.基本配置
 
-#### (1).添加权限
+#### (1).添加包依赖
+将arr包拷贝到项目lib文件目录,然后再gradle中添加这这些依赖库
+```xml
+dependencies {
+    compile 'com.android.support:support-v4:24.+'
+    compile 'com.android.support:appcompat-v7:24.+'
+    compile(name: 'yunxi-player-lib-release', ext: 'aar')
+    compile 'com.android.support:recyclerview-v7:24.+'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.8@aar'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.jude:easyrecyclerview:4.2.1'
+    compile 'com.wilddog.client:wilddog-sync-android:2.0.1'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+    }
+}
+
+```
+#### (2).添加权限
 在 AndroidMainfest 添加网络访问权限
 ```xml
         <uses-permission android:name="android.permission.INTERNET" />
 ```
-#### (2).注册应用
+#### (3).注册应用
 ```java
         YXSDK.register(this, APPID, ACCESSKEY, SECRETKEY);
 ```
