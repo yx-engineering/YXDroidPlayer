@@ -17,6 +17,14 @@
 #### (1).添加包依赖
 将arr包拷贝到项目lib文件目录,然后再gradle中添加这这些依赖库
 ```xml
+
+android {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
 dependencies {
     compile 'com.android.support:support-v4:24.+'
     compile 'com.android.support:appcompat-v7:24.+'
