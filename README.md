@@ -66,7 +66,7 @@ dependencies {
     @Override
     protected void onResume() {
         super.onResume();
-        yxActivityList.resumePlay();
+        yxActivityList.onResume();
     }
     
 ```
