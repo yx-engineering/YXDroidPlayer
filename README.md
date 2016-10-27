@@ -61,7 +61,16 @@ dependencies {
         android:layout_height="match_parent">
     </com.yunxi.player.lib.YXActivityList>
 ```
-#### (2).加载数据
+#### (2).各个生命周期配置 
+```java
+    @Override
+    protected void onResume() {
+        super.onResume();
+        yxActivityList.resumePlay();
+    }
+    
+```
+#### (3).加载数据
       YXActivityList控件会根据注册信息自动加载数据
 ###  2.播放器控件
 #### (1).初始化播放器
@@ -89,6 +98,12 @@ dependencies {
         super.onDestroy();
         yunxiPlayer.destoryPlayer;
     } 
+    
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        yunxiPlayer.onKeyDown(keyCode, event);
+        return super.onKeyDown(keyCode, event);
+    }
     
 ```
 #### (3).直播准备,载入播放数据
