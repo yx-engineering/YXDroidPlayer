@@ -1,7 +1,7 @@
 ## 云犀直播 YXDroidPlayer 播放控件说明文档
 -  @author  FindFreeFire <zhouhang@yunxi.tv> 
 -  @link 
--  @version 1.0 
+-  @version 1.0.1
 
 云犀直播开发的Android的视频播放器 SDK，简化了开发流程，特色是支持 RTMP 和 HLS 直播流媒体播放,相关API网站 ：http://b.yunxi.tv/developer/
 
